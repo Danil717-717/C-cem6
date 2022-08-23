@@ -20,8 +20,10 @@ int GetLentMirray(int number)
 int[] Translation(int number)
 {
     int[] array = new int[GetLentMirray(number)];
+    // for(int i = array.Length; i >= 0; i--)
     for(int i = 0; i < array.Length; i++)
     {
+        //array[i] = number % 2;
         array[array.Length - 1 - i] = number % 2;
         number = number / 2;
     }
@@ -38,4 +40,30 @@ void PrintArray(int[] array)
 int [] myArray = Translation(45);
 PrintArray(myArray);
 //Console.WriteLine(GetLentMirray(8));
+
+
+// через строки
+
+void MakeBinary()
+{
+    Console.Write("Введите число: ");
+    int number = Convert.ToInt32(Console.ReadLine());
+
+    string binary = string.Empty;
+    int n = number;
+    while (n > 0)
+    {
+        binary = $"{n % 2}" + binary;
+        n /= 2;
+    }
+
+    Console.WriteLine($"{number} -> {binary}");
+}
+
+MakeBinary();
+
+
+
+
+
 
