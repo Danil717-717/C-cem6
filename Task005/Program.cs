@@ -32,6 +32,11 @@ int [] CoppyArray(int[] arr)
 }
 
 int [] array = CreateArray(7);
+Console.WriteLine();
+int[] newArray = CoppyArray(array);
 PrintArray(array);
-
-PrintArray(CoppyArray(array));
+PrintArray(array);
+Console.WriteLine();
+array[0] = 1;
+PrintArray(array);
+PrintArray(newArray);
